@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Acessível no Dia a Dia</title>
+  <meta name="description" content="Artigos sobre acessibilidade na vida cotidiana: mobilidade, internet, comunicação, educação, trabalho e direitos.">
+  <link rel="icon" href="img/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+  <nav class="atalhos" aria-label="Atalhos de teclado">
+    <ul>
+      <li><a href="#conteudo" accesskey="1">Ir para o conteúdo [1]</a></li>
+      <li><a href="#menu-principal" accesskey="2">Ir para o menu [2]</a></li>
+      <li><a href="#barra-acessibilidade" accesskey="3">Ir para os recursos de acessibilidade [3]</a></li>
+      <li><a href="#rodape" accesskey="4">Ir para o rodapé [4]</a></li>
+    </ul>
+  </nav>
+
+  <section class="barra-acess" id="barra-acessibilidade" aria-labelledby="titulo-barra" tabindex="-1">
+    <div class="conteiner">
+      <h2 id="titulo-barra">Recursos de acessibilidade</h2>
+      <button type="button" data-fonte="mais">A+<span class="visualmente-oculto"> aumentar o texto</span></button>
+      <button type="button" data-fonte="menos">A−<span class="visualmente-oculto"> diminuir o texto</span></button>
+      <button type="button" data-alternar="alto-contraste" aria-pressed="false">Alto contraste</button>
+      <button type="button" data-alternar="espacamento" aria-pressed="false">Espaçamento</button>
+      <button type="button" data-alternar="destacar-links" aria-pressed="false">Destacar links</button>
+      <button type="button" id="restaurar">Restaurar padrão</button>
+    </div>
+  </section>
+
+  <header class="cabecalho">
+    <div class="conteiner">
+      <a class="marca" href="index.html">
+        <img src="img/logo.svg" alt="" width="48" height="48">
+        <span>Acessível no Dia a Dia<small>Artigos sobre inclusão na vida cotidiana</small></span>
+      </a>
+      <button type="button" class="botao-menu" id="botao-menu" aria-controls="menu-principal" aria-expanded="true">Menu</button>
+      <nav class="menu" id="menu-principal" aria-label="Menu principal" tabindex="-1" data-aberto="true">
+        <ul>
+          <li><a href="index.html" aria-current="page">Início</a></li>
+          <li><a href="mobilidade.html">Mobilidade</a></li>
+          <li><a href="digital.html">Acessibilidade digital</a></li>
+          <li><a href="comunicacao.html">Comunicação</a></li>
+          <li><a href="trabalho.html">Educação e trabalho</a></li>
+          <li><a href="direitos.html">Direitos e leis</a></li>
+          <li><a href="sobre.html">Sobre e contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <div class="piso-alerta" aria-hidden="true"></div>
+
+  <main id="conteudo" tabindex="-1">
+    <section class="abertura" aria-labelledby="titulo-inicio">
+      <div class="conteiner">
+        <div>
+          <h1 id="titulo-inicio">Acessibilidade é o que faz a cidade funcionar para todo mundo</h1>
+          <p>Calçadas, ônibus, sites, salas de aula e escritórios: textos curtos e diretos sobre como a acessibilidade aparece, ou falta, nos lugares por onde passamos todos os dias.</p>
+          <div class="acoes">
+            <a class="botao" href="mobilidade.html">Começar pela mobilidade</a>
+            <a class="botao botao--secundario" href="direitos.html">Conhecer seus direitos</a>
+          </div>
+        </div>
+        <img src="img/capa.svg" alt="Ilustração de uma rua com piso tátil vermelho, rampa de acesso e uma pessoa em cadeira de rodas seguindo pela calçada" width="420" height="360">
+      </div>
+    </section>
+    <div class="piso-alerta" aria-hidden="true"></div>
+
+    <div class="conteiner">
+      <section aria-labelledby="titulo-numeros">
+        <h2 id="titulo-numeros">Quem precisa de acessibilidade?</h2>
+        <p>A resposta curta é: todo mundo, em algum momento. Uma pessoa idosa, alguém com o braço engessado, uma mãe empurrando um carrinho de bebê ou um turista que não fala a língua local se beneficiam das mesmas soluções pensadas para pessoas com deficiência. Ainda assim, os números mostram que esse público é grande por si só.</p>
+        <dl class="numeros">
+          <div><dt>pessoas com deficiência no Brasil</dt><dd>14,4 milhões</dd></div>
+          <div><dt>da população com 2 anos ou mais</dt><dd>7,3%</dd></div>
+          <div><dt>lei que garante a inclusão (LBI)</dt><dd>Lei 13.146</dd></div>
+        </dl>
+        <p class="fonte-dados">Fonte: IBGE, Censo Demográfico 2022, divulgado em maio de 2025; Lei Brasileira de Inclusão, de 2015.</p>
+      </section>
+
+      <section aria-labelledby="titulo-temas">
+        <h2 id="titulo-temas">Escolha um tema</h2>
+        <ul class="temas">
+          <li><a href="mobilidade.html"><img src="img/icone-mobilidade.svg" alt="" width="72" height="72"><div><h3>Mobilidade</h3><p>Calçadas, piso tátil, transporte público e o caminho entre a casa e o destino.</p></div></a></li>
+          <li><a href="digital.html"><img src="img/icone-digital.svg" alt="" width="72" height="72"><div><h3>Acessibilidade digital</h3><p>Sites, aplicativos e o que muda quando alguém usa leitor de tela ou só o teclado.</p></div></a></li>
+          <li><a href="comunicacao.html"><img src="img/icone-comunicacao.svg" alt="" width="72" height="72"><div><h3>Comunicação</h3><p>Libras, legendas, braille, audiodescrição e linguagem simples.</p></div></a></li>
+          <li><a href="trabalho.html"><img src="img/icone-trabalho.svg" alt="" width="72" height="72"><div><h3>Educação e trabalho</h3><p>Escola inclusiva, adaptações razoáveis e a Lei de Cotas nas empresas.</p></div></a></li>
+          <li><a href="direitos.html"><img src="img/icone-direitos.svg" alt="" width="72" height="72"><div><h3>Direitos e leis</h3><p>O que a legislação brasileira garante e onde buscar ajuda.</p></div></a></li>
+          <li><a href="sobre.html"><img src="img/icone-sobre.svg" alt="" width="72" height="72"><div><h3>Sobre e contato</h3><p>Como este site foi feito, atalhos de teclado e formulário para relatar problemas.</p></div></a></li>
+        </ul>
+      </section>
+    </div>
+  </main>
+
+  <footer class="rodape" id="rodape" tabindex="-1">
+    <div class="conteiner">
+      <div>
+        <h2>Acessível no Dia a Dia</h2>
+        <p>Site produzido como Trabalho Discente Efetivo da disciplina de Programação Web, Engenharia de Software, PUCPR. Conteúdo informativo; não substitui orientação jurídica ou de saúde.</p>
+        <p>&copy; <span id="ano">2026</span> Bruno Ianzen de Oliveira.</p>
+      </div>
+      <nav aria-label="Mapa do site">
+        <h2>Mapa do site</h2>
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="mobilidade.html">Mobilidade</a></li>
+          <li><a href="digital.html">Acessibilidade digital</a></li>
+          <li><a href="comunicacao.html">Comunicação</a></li>
+          <li><a href="trabalho.html">Educação e trabalho</a></li>
+          <li><a href="direitos.html">Direitos e leis</a></li>
+          <li><a href="sobre.html">Sobre e contato</a></li>
+        </ul>
+      </nav>
+      <div>
+        <h2>Acessibilidade</h2>
+        <ul>
+          <li><a href="sobre.html#declaracao">Declaração de acessibilidade</a></li>
+          <li><a href="sobre.html#atalhos-teclado">Atalhos de teclado</a></li>
+          <li><a href="sobre.html#contato">Relatar um problema</a></li>
+        </ul>
+        <a class="voltar-topo" href="#conteudo">Voltar ao início do conteúdo</a>
+      </div>
+    </div>
+  </footer>
+
+  <div id="aviso-status" class="visualmente-oculto" role="status" aria-live="polite"></div>
+
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper><div class="vw-plugin-top-wrapper"></div></div>
+  </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js" defer></script>
+  <script src="js/acessibilidade.js" defer></script>
+  <script>
+    window.addEventListener("load", function () {
+      if (window.VLibras) new window.VLibras.Widget("https://vlibras.gov.br/app");
+    });
+  </script>
+</body>
+</html>

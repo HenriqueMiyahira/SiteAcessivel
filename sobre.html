@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sobre e contato | Acessível no Dia a Dia</title>
+  <meta name="description" content="Declaração de acessibilidade, atalhos de teclado e formulário de contato.">
+  <link rel="icon" href="img/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+  <nav class="atalhos" aria-label="Atalhos de teclado">
+    <ul>
+      <li><a href="#conteudo" accesskey="1">Ir para o conteúdo [1]</a></li>
+      <li><a href="#menu-principal" accesskey="2">Ir para o menu [2]</a></li>
+      <li><a href="#barra-acessibilidade" accesskey="3">Ir para os recursos de acessibilidade [3]</a></li>
+      <li><a href="#rodape" accesskey="4">Ir para o rodapé [4]</a></li>
+    </ul>
+  </nav>
+
+  <section class="barra-acess" id="barra-acessibilidade" aria-labelledby="titulo-barra" tabindex="-1">
+    <div class="conteiner">
+      <h2 id="titulo-barra">Recursos de acessibilidade</h2>
+      <button type="button" data-fonte="mais">A+<span class="visualmente-oculto"> aumentar o texto</span></button>
+      <button type="button" data-fonte="menos">A−<span class="visualmente-oculto"> diminuir o texto</span></button>
+      <button type="button" data-alternar="alto-contraste" aria-pressed="false">Alto contraste</button>
+      <button type="button" data-alternar="espacamento" aria-pressed="false">Espaçamento</button>
+      <button type="button" data-alternar="destacar-links" aria-pressed="false">Destacar links</button>
+      <button type="button" id="restaurar">Restaurar padrão</button>
+    </div>
+  </section>
+
+  <header class="cabecalho">
+    <div class="conteiner">
+      <a class="marca" href="index.html">
+        <img src="img/logo.svg" alt="" width="48" height="48">
+        <span>Acessível no Dia a Dia<small>Artigos sobre inclusão na vida cotidiana</small></span>
+      </a>
+      <button type="button" class="botao-menu" id="botao-menu" aria-controls="menu-principal" aria-expanded="true">Menu</button>
+      <nav class="menu" id="menu-principal" aria-label="Menu principal" tabindex="-1" data-aberto="true">
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="mobilidade.html">Mobilidade</a></li>
+          <li><a href="digital.html">Acessibilidade digital</a></li>
+          <li><a href="comunicacao.html">Comunicação</a></li>
+          <li><a href="trabalho.html">Educação e trabalho</a></li>
+          <li><a href="direitos.html">Direitos e leis</a></li>
+          <li><a href="sobre.html" aria-current="page">Sobre e contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <div class="piso-alerta" aria-hidden="true"></div>
+
+  <main id="conteudo" tabindex="-1">
+    <div class="conteiner">
+      <nav class="trilha" aria-label="Você está aqui">
+        <ol>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="sobre.html" aria-current="page">Sobre e contato</a></li>
+        </ol>
+      </nav>
+      <div class="artigo-layout">
+        <nav class="sumario" aria-labelledby="titulo-sumario">
+          <h2 id="titulo-sumario">Nesta página</h2>
+          <ol>
+            <li><a href="#sobre-projeto">Sobre o projeto</a></li>
+            <li><a href="#declaracao">Declaração de acessibilidade</a></li>
+            <li><a href="#atalhos-teclado">Atalhos de teclado</a></li>
+            <li><a href="#contato">Contato</a></li>
+          </ol>
+        </nav>
+        <article class="artigo" data-leitura>
+          <h1>Sobre o site e contato</h1>
+          <p class="linha-fina">Como este site foi construído para ser acessível, e como você pode relatar qualquer barreira encontrada.</p>
+          <div class="ler-voz">
+            <button type="button" class="botao botao--secundario" id="ouvir" aria-pressed="false">Ouvir esta página</button>
+            <button type="button" class="botao botao--secundario" id="parar-leitura">Parar leitura</button>
+          </div>
+
+          <section aria-labelledby="sobre-projeto">
+            <h2 id="sobre-projeto">Sobre o projeto</h2>
+            <p>O <strong>Acessível no Dia a Dia</strong> reúne artigos curtos sobre acessibilidade na vida cotidiana. Foi desenvolvido por Bruno Ianzen de Oliveira, estudante de Engenharia de Software da PUCPR, para a disciplina de Programação Web, usando apenas HTML, CSS e JavaScript.</p>
+          </section>
+
+          <section aria-labelledby="declaracao">
+            <h2 id="declaracao">Declaração de acessibilidade</h2>
+            <p>O site busca atender ao nível AA das WCAG 2.2 e às recomendações do eMAG. Os recursos implementados são:</p>
+            <ul>
+              <li>Estrutura semântica com cabeçalho, menu, conteúdo principal e rodapé identificados, e títulos em ordem hierárquica;</li>
+              <li>Idioma da página declarado como português do Brasil, para que os leitores de tela usem a pronúncia correta;</li>
+              <li>Atalhos de teclado no padrão eMAG e link para pular direto ao conteúdo;</li>
+              <li>Navegação completa por teclado, com indicador de foco bem visível;</li>
+              <li>Contraste de cores acima do mínimo exigido e modo de alto contraste;</li>
+              <li>Controle de tamanho de texto, espaçamento ampliado e destaque de links, com as escolhas salvas no navegador;</li>
+              <li>Fonte Atkinson Hyperlegible, criada pelo Braille Institute para facilitar a leitura de pessoas com baixa visão;</li>
+              <li>Textos alternativos em todas as imagens informativas, e imagens decorativas ocultas para leitores de tela;</li>
+              <li>Leitura do conteúdo em voz alta pela síntese de voz do navegador;</li>
+              <li>Tradução para Libras com o VLibras;</li>
+              <li>Tabelas com legenda e cabeçalhos associados;</li>
+              <li>Formulário com rótulos, instruções e mensagens de erro anunciadas por leitores de tela;</li>
+              <li>Layout responsivo, que se adapta ao celular e a ampliações de até 400%;</li>
+              <li>Respeito à preferência do sistema por menos animações.</li>
+            </ul>
+          </section>
+
+          <section aria-labelledby="atalhos-teclado">
+            <h2 id="atalhos-teclado">Atalhos de teclado</h2>
+            <p>As teclas de atalho variam conforme o navegador. Combine a tecla indicada com o número do atalho:</p>
+            <div class="tabela-rolagem">
+              <table>
+                <caption>Atalhos disponíveis em todas as páginas</caption>
+                <thead><tr><th scope="col">Número</th><th scope="col">Destino</th></tr></thead>
+                <tbody>
+                  <tr><th scope="row">1</th><td>Conteúdo principal</td></tr>
+                  <tr><th scope="row">2</th><td>Menu principal</td></tr>
+                  <tr><th scope="row">3</th><td>Recursos de acessibilidade</td></tr>
+                  <tr><th scope="row">4</th><td>Rodapé</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p>No Chrome e no Edge para Windows, use <kbd>Alt</kbd> + número. No Firefox, use <kbd>Alt</kbd> + <kbd>Shift</kbd> + número. No Safari e no Chrome para macOS, use <kbd>Control</kbd> + <kbd>Option</kbd> + número.</p>
+          </section>
+
+          <section aria-labelledby="contato">
+            <h2 id="contato">Contato</h2>
+            <p>Encontrou alguma barreira ou quer sugerir um tema? Preencha o formulário. Campos marcados com <span class="obrigatorio" aria-hidden="true">*</span><span class="visualmente-oculto">asterisco</span> são obrigatórios.</p>
+
+            <div class="resumo-erros" id="resumo-erros" tabindex="-1" hidden role="alert" aria-labelledby="titulo-erros">
+              <h2 id="titulo-erros">Corrija os campos abaixo para enviar</h2>
+              <ul id="lista-erros"></ul>
+            </div>
+            <p class="status-envio" id="status-envio" tabindex="-1" role="status"></p>
+
+            <form class="formulario" id="form-contato" novalidate>
+              <div class="campo">
+                <label for="nome">Nome <span class="obrigatorio" aria-hidden="true">*</span></label>
+                <input type="text" id="nome" name="nome" autocomplete="name" required aria-describedby="erro-nome">
+                <p class="mensagem-erro" id="erro-nome"></p>
+              </div>
+              <div class="campo">
+                <label for="email">E-mail <span class="obrigatorio" aria-hidden="true">*</span></label>
+                <span class="dica" id="dica-email">Usaremos apenas para responder sua mensagem.</span>
+                <input type="email" id="email" name="email" autocomplete="email" inputmode="email" required aria-describedby="dica-email erro-email">
+                <p class="mensagem-erro" id="erro-email"></p>
+              </div>
+              <div class="campo">
+                <label for="assunto">Assunto <span class="obrigatorio" aria-hidden="true">*</span></label>
+                <select id="assunto" name="assunto" required aria-describedby="erro-assunto">
+                  <option value="">Selecione uma opção</option>
+                  <option>Relatar barreira de acessibilidade</option>
+                  <option>Sugerir um tema</option>
+                  <option>Corrigir uma informação</option>
+                  <option>Outro assunto</option>
+                </select>
+                <p class="mensagem-erro" id="erro-assunto"></p>
+              </div>
+              <fieldset class="campo" style="border:0;padding:0;margin:0">
+                <legend style="font-weight:700;margin-bottom:0.3rem">Como prefere receber a resposta?</legend>
+                <label style="font-weight:400;display:flex;gap:0.5rem;align-items:center"><input type="radio" name="resposta" value="email" checked style="width:24px;min-height:24px"> Por e-mail</label>
+                <label style="font-weight:400;display:flex;gap:0.5rem;align-items:center"><input type="radio" name="resposta" value="nenhuma" style="width:24px;min-height:24px"> Não preciso de resposta</label>
+              </fieldset>
+              <div class="campo">
+                <label for="mensagem">Mensagem <span class="obrigatorio" aria-hidden="true">*</span></label>
+                <span class="dica" id="dica-mensagem">Se for uma barreira, conte em qual página ela aparece e qual tecnologia você usa.</span>
+                <textarea id="mensagem" name="mensagem" required aria-describedby="dica-mensagem erro-mensagem"></textarea>
+                <p class="mensagem-erro" id="erro-mensagem"></p>
+              </div>
+              <div><button type="submit" class="botao">Enviar mensagem</button></div>
+            </form>
+            <p class="meta">Este formulário é demonstrativo: a mensagem é validada no navegador e não é enviada para nenhum servidor.</p>
+          </section>
+
+          <nav class="paginacao" aria-label="Navegação entre artigos">
+            <a href="direitos.html" rel="prev">Anterior: Direitos e leis</a>
+            <a href="index.html">Voltar ao início</a>
+          </nav>
+        </article>
+      </div>
+    </div>
+  </main>
+
+  <footer class="rodape" id="rodape" tabindex="-1">
+    <div class="conteiner">
+      <div>
+        <h2>Acessível no Dia a Dia</h2>
+        <p>Site produzido como Trabalho Discente Efetivo da disciplina de Programação Web, Engenharia de Software, PUCPR. Conteúdo informativo; não substitui orientação jurídica ou de saúde.</p>
+        <p>&copy; <span id="ano">2026</span> Bruno Ianzen de Oliveira.</p>
+      </div>
+      <nav aria-label="Mapa do site">
+        <h2>Mapa do site</h2>
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="mobilidade.html">Mobilidade</a></li>
+          <li><a href="digital.html">Acessibilidade digital</a></li>
+          <li><a href="comunicacao.html">Comunicação</a></li>
+          <li><a href="trabalho.html">Educação e trabalho</a></li>
+          <li><a href="direitos.html">Direitos e leis</a></li>
+          <li><a href="sobre.html">Sobre e contato</a></li>
+        </ul>
+      </nav>
+      <div>
+        <h2>Acessibilidade</h2>
+        <ul>
+          <li><a href="sobre.html#declaracao">Declaração de acessibilidade</a></li>
+          <li><a href="sobre.html#atalhos-teclado">Atalhos de teclado</a></li>
+          <li><a href="sobre.html#contato">Relatar um problema</a></li>
+        </ul>
+        <a class="voltar-topo" href="#conteudo">Voltar ao início do conteúdo</a>
+      </div>
+    </div>
+  </footer>
+
+  <div id="aviso-status" class="visualmente-oculto" role="status" aria-live="polite"></div>
+
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper><div class="vw-plugin-top-wrapper"></div></div>
+  </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js" defer></script>
+  <script src="js/acessibilidade.js" defer></script>
+  <script>
+    window.addEventListener("load", function () {
+      if (window.VLibras) new window.VLibras.Widget("https://vlibras.gov.br/app");
+    });
+  </script>
+</body>
+</html>

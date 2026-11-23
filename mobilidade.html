@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mobilidade | Acessível no Dia a Dia</title>
+  <meta name="description" content="Calçadas, piso tátil, transporte público e desenho universal.">
+  <link rel="icon" href="img/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+  <nav class="atalhos" aria-label="Atalhos de teclado">
+    <ul>
+      <li><a href="#conteudo" accesskey="1">Ir para o conteúdo [1]</a></li>
+      <li><a href="#menu-principal" accesskey="2">Ir para o menu [2]</a></li>
+      <li><a href="#barra-acessibilidade" accesskey="3">Ir para os recursos de acessibilidade [3]</a></li>
+      <li><a href="#rodape" accesskey="4">Ir para o rodapé [4]</a></li>
+    </ul>
+  </nav>
+
+  <section class="barra-acess" id="barra-acessibilidade" aria-labelledby="titulo-barra" tabindex="-1">
+    <div class="conteiner">
+      <h2 id="titulo-barra">Recursos de acessibilidade</h2>
+      <button type="button" data-fonte="mais">A+<span class="visualmente-oculto"> aumentar o texto</span></button>
+      <button type="button" data-fonte="menos">A−<span class="visualmente-oculto"> diminuir o texto</span></button>
+      <button type="button" data-alternar="alto-contraste" aria-pressed="false">Alto contraste</button>
+      <button type="button" data-alternar="espacamento" aria-pressed="false">Espaçamento</button>
+      <button type="button" data-alternar="destacar-links" aria-pressed="false">Destacar links</button>
+      <button type="button" id="restaurar">Restaurar padrão</button>
+    </div>
+  </section>
+
+  <header class="cabecalho">
+    <div class="conteiner">
+      <a class="marca" href="index.html">
+        <img src="img/logo.svg" alt="" width="48" height="48">
+        <span>Acessível no Dia a Dia<small>Artigos sobre inclusão na vida cotidiana</small></span>
+      </a>
+      <button type="button" class="botao-menu" id="botao-menu" aria-controls="menu-principal" aria-expanded="true">Menu</button>
+      <nav class="menu" id="menu-principal" aria-label="Menu principal" tabindex="-1" data-aberto="true">
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="mobilidade.html" aria-current="page">Mobilidade</a></li>
+          <li><a href="digital.html">Acessibilidade digital</a></li>
+          <li><a href="comunicacao.html">Comunicação</a></li>
+          <li><a href="trabalho.html">Educação e trabalho</a></li>
+          <li><a href="direitos.html">Direitos e leis</a></li>
+          <li><a href="sobre.html">Sobre e contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <div class="piso-alerta" aria-hidden="true"></div>
+
+  <main id="conteudo" tabindex="-1">
+    <div class="conteiner">
+      <nav class="trilha" aria-label="Você está aqui">
+        <ol>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="mobilidade.html" aria-current="page">Mobilidade: o caminho começa na calçada</a></li>
+        </ol>
+      </nav>
+      <div class="artigo-layout">
+        <nav class="sumario" aria-labelledby="titulo-sumario">
+          <h2 id="titulo-sumario">Nesta página</h2>
+          <ol>
+          <li><a href="#calcada">A calçada é o primeiro meio de transporte</a></li>
+          <li><a href="#piso-tatil">Como ler o piso tátil</a></li>
+          <li><a href="#transporte">Transporte público para todos</a></li>
+          <li><a href="#desenho-universal">Desenho universal: pensar em todos desde o início</a></li>
+          </ol>
+        </nav>
+        <article class="artigo" data-leitura>
+          <h1>Mobilidade: o caminho começa na calçada</h1>
+          <p class="linha-fina">Antes de chegar ao ônibus, ao trabalho ou à escola, toda pessoa precisa atravessar a rua. É ali que a acessibilidade é testada primeiro.</p>
+          <div class="ler-voz">
+            <button type="button" class="botao botao--secundario" id="ouvir" aria-pressed="false">Ouvir este artigo</button>
+            <button type="button" class="botao botao--secundario" id="parar-leitura">Parar leitura</button>
+          </div>
+          <figure>
+            <img src="img/figura-mobilidade.svg" alt="Ilustração de um ônibus com rampa vermelha aberta junto ao ponto, piso tátil direcional ao longo da calçada e piso de alerta diante do totem do ponto de ônibus" width="800" height="360">
+            <figcaption>O piso tátil direcional orienta o trajeto; o de alerta indica mudança, como um ponto de ônibus ou uma travessia.</figcaption>
+          </figure>
+      <section aria-labelledby="calcada">
+        <h2 id="calcada">A calçada é o primeiro meio de transporte</h2>
+        <p>Quem anda a pé, usa cadeira de rodas, bengala ou andador depende de uma calçada contínua, sem degraus e com largura suficiente. No Brasil, a responsabilidade pela calçada costuma ser dividida entre o poder público e o dono do imóvel em frente, o que ajuda a explicar por que é tão comum encontrar trechos com desníveis, rampas improvisadas para carros e postes no meio da passagem.</p>
+        <p>A norma técnica ABNT NBR 9050 define medidas como a faixa livre para circulação, a inclinação máxima de rampas e a altura de elementos como orelhões e lixeiras. Seguir a norma não é luxo: uma única quina mal resolvida pode transformar um trajeto de cinco minutos em um desvio pela rua, disputando espaço com os carros.</p>
+      </section>
+      <section aria-labelledby="piso-tatil">
+        <h2 id="piso-tatil">Como ler o piso tátil</h2>
+        <p>Aquele piso amarelo com relevo não é enfeite. Ele existe em dois tipos, definidos pela ABNT NBR 16537:</p>
+        <ul>
+          <li><strong>Piso direcional</strong>, com faixas em linha, que indica o caminho a seguir, como um corrimão no chão.</li>
+          <li><strong>Piso de alerta</strong>, com pontos em relevo, que avisa sobre mudança de direção, obstáculo, escada, rampa ou travessia.</li>
+        </ul>
+        <p>Pessoas cegas ou com baixa visão percebem o relevo com a bengala e com os pés. A cor contrastante, normalmente amarela, ajuda quem enxerga pouco. Por isso, colocar mesas de bar, bicicletas ou placas sobre o piso tátil é bloquear o caminho de alguém.</p>
+        <div class="destaque" role="note">
+          <h3>Na prática</h3>
+          <p>Se você vir alguém com bengala parado em um cruzamento, pergunte se a pessoa quer ajuda antes de tocá-la. Se ela aceitar, ofereça o cotovelo para que segure, em vez de empurrá-la ou puxá-la pelo braço.</p>
+        </div>
+      </section>
+      <section aria-labelledby="transporte">
+        <h2 id="transporte">Transporte público para todos</h2>
+        <p>Ônibus com piso baixo ou plataforma elevatória, espaço reservado para cadeira de rodas, avisos sonoros e visuais das paradas e motoristas treinados fazem diferença real. Curitiba, por exemplo, ficou conhecida pelas estações-tubo com embarque em nível, uma solução que elimina degraus para todos os passageiros.</p>
+        <p>Mesmo com veículos adaptados, a acessibilidade depende da cadeia inteira: de nada adianta um ônibus com rampa se o ponto não tem calçada nivelada, ou se o aplicativo que informa horários não funciona com leitor de tela.</p>
+      </section>
+      <section aria-labelledby="desenho-universal">
+        <h2 id="desenho-universal">Desenho universal: pensar em todos desde o início</h2>
+        <p>O conceito de desenho universal propõe projetar espaços e produtos que possam ser usados pelo maior número de pessoas possível, sem necessidade de adaptação posterior. Uma rampa bem feita na entrada de um prédio atende a quem usa cadeira de rodas, mas também a quem chega com mala, carrinho de compras ou bebê.</p>
+        <p>Adaptar depois quase sempre custa mais caro e funciona pior. Por isso a Lei Brasileira de Inclusão exige que novas construções e reformas já sigam as normas de acessibilidade.</p>
+      </section>
+          <nav class="paginacao" aria-label="Navegação entre artigos">
+            <span></span>
+            <a href="digital.html" rel="next">Próximo: Acessibilidade digital</a>
+          </nav>
+        </article>
+      </div>
+    </div>
+  </main>
+
+  <footer class="rodape" id="rodape" tabindex="-1">
+    <div class="conteiner">
+      <div>
+        <h2>Acessível no Dia a Dia</h2>
+        <p>Site produzido como Trabalho Discente Efetivo da disciplina de Programação Web, Engenharia de Software, PUCPR. Conteúdo informativo; não substitui orientação jurídica ou de saúde.</p>
+        <p>&copy; <span id="ano">2026</span> Bruno Ianzen de Oliveira.</p>
+      </div>
+      <nav aria-label="Mapa do site">
+        <h2>Mapa do site</h2>
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="mobilidade.html">Mobilidade</a></li>
+          <li><a href="digital.html">Acessibilidade digital</a></li>
+          <li><a href="comunicacao.html">Comunicação</a></li>
+          <li><a href="trabalho.html">Educação e trabalho</a></li>
+          <li><a href="direitos.html">Direitos e leis</a></li>
+          <li><a href="sobre.html">Sobre e contato</a></li>
+        </ul>
+      </nav>
+      <div>
+        <h2>Acessibilidade</h2>
+        <ul>
+          <li><a href="sobre.html#declaracao">Declaração de acessibilidade</a></li>
+          <li><a href="sobre.html#atalhos-teclado">Atalhos de teclado</a></li>
+          <li><a href="sobre.html#contato">Relatar um problema</a></li>
+        </ul>
+        <a class="voltar-topo" href="#conteudo">Voltar ao início do conteúdo</a>
+      </div>
+    </div>
+  </footer>
+
+  <div id="aviso-status" class="visualmente-oculto" role="status" aria-live="polite"></div>
+
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper><div class="vw-plugin-top-wrapper"></div></div>
+  </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js" defer></script>
+  <script src="js/acessibilidade.js" defer></script>
+  <script>
+    window.addEventListener("load", function () {
+      if (window.VLibras) new window.VLibras.Widget("https://vlibras.gov.br/app");
+    });
+  </script>
+</body>
+</html>

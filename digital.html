@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Acessibilidade digital | Acessível no Dia a Dia</title>
+  <meta name="description" content="Como pessoas com deficiência usam a web, as diretrizes WCAG e os erros mais comuns em sites.">
+  <link rel="icon" href="img/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+  <nav class="atalhos" aria-label="Atalhos de teclado">
+    <ul>
+      <li><a href="#conteudo" accesskey="1">Ir para o conteúdo [1]</a></li>
+      <li><a href="#menu-principal" accesskey="2">Ir para o menu [2]</a></li>
+      <li><a href="#barra-acessibilidade" accesskey="3">Ir para os recursos de acessibilidade [3]</a></li>
+      <li><a href="#rodape" accesskey="4">Ir para o rodapé [4]</a></li>
+    </ul>
+  </nav>
+
+  <section class="barra-acess" id="barra-acessibilidade" aria-labelledby="titulo-barra" tabindex="-1">
+    <div class="conteiner">
+      <h2 id="titulo-barra">Recursos de acessibilidade</h2>
+      <button type="button" data-fonte="mais">A+<span class="visualmente-oculto"> aumentar o texto</span></button>
+      <button type="button" data-fonte="menos">A−<span class="visualmente-oculto"> diminuir o texto</span></button>
+      <button type="button" data-alternar="alto-contraste" aria-pressed="false">Alto contraste</button>
+      <button type="button" data-alternar="espacamento" aria-pressed="false">Espaçamento</button>
+      <button type="button" data-alternar="destacar-links" aria-pressed="false">Destacar links</button>
+      <button type="button" id="restaurar">Restaurar padrão</button>
+    </div>
+  </section>
+
+  <header class="cabecalho">
+    <div class="conteiner">
+      <a class="marca" href="index.html">
+        <img src="img/logo.svg" alt="" width="48" height="48">
+        <span>Acessível no Dia a Dia<small>Artigos sobre inclusão na vida cotidiana</small></span>
+      </a>
+      <button type="button" class="botao-menu" id="botao-menu" aria-controls="menu-principal" aria-expanded="true">Menu</button>
+      <nav class="menu" id="menu-principal" aria-label="Menu principal" tabindex="-1" data-aberto="true">
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="mobilidade.html">Mobilidade</a></li>
+          <li><a href="digital.html" aria-current="page">Acessibilidade digital</a></li>
+          <li><a href="comunicacao.html">Comunicação</a></li>
+          <li><a href="trabalho.html">Educação e trabalho</a></li>
+          <li><a href="direitos.html">Direitos e leis</a></li>
+          <li><a href="sobre.html">Sobre e contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <div class="piso-alerta" aria-hidden="true"></div>
+
+  <main id="conteudo" tabindex="-1">
+    <div class="conteiner">
+      <nav class="trilha" aria-label="Você está aqui">
+        <ol>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="digital.html" aria-current="page">Acessibilidade digital: a internet também tem calçadas</a></li>
+        </ol>
+      </nav>
+      <div class="artigo-layout">
+        <nav class="sumario" aria-labelledby="titulo-sumario">
+          <h2 id="titulo-sumario">Nesta página</h2>
+          <ol>
+          <li><a href="#como-usam">Como diferentes pessoas usam a web</a></li>
+          <li><a href="#wcag">As diretrizes WCAG e o eMAG</a></li>
+          <li><a href="#erros-comuns">Erros mais comuns e como evitar</a></li>
+          <li><a href="#teste-voce">Teste você mesmo</a></li>
+          </ol>
+        </nav>
+        <article class="artigo" data-leitura>
+          <h1>Acessibilidade digital: a internet também tem calçadas</h1>
+          <p class="linha-fina">Pagar uma conta, marcar uma consulta ou estudar acontece cada vez mais pela tela. Um site mal construído pode ser uma barreira tão real quanto uma escada.</p>
+          <div class="ler-voz">
+            <button type="button" class="botao botao--secundario" id="ouvir" aria-pressed="false">Ouvir este artigo</button>
+            <button type="button" class="botao botao--secundario" id="parar-leitura">Parar leitura</button>
+          </div>
+          <figure>
+            <img src="img/figura-digital.svg" alt="Comparação entre duas telas: à esquerda, textos cinza-claros sobre branco, difíceis de ler; à direita, textos escuros, botão vermelho e contorno vermelho de foco ao redor do botão" width="800" height="360">
+            <figcaption>Contraste insuficiente é um dos erros mais comuns em sites; o contorno de foco mostra a quem usa teclado onde está a navegação.</figcaption>
+          </figure>
+      <section aria-labelledby="como-usam">
+        <h2 id="como-usam">Como diferentes pessoas usam a web</h2>
+        <p>Pessoas cegas costumam usar <strong>leitores de tela</strong>, programas que transformam o conteúdo em voz sintetizada ou em braille, como NVDA, JAWS e o VoiceOver dos aparelhos da Apple. Quem tem pouca mobilidade nas mãos pode navegar apenas pelo teclado, por comandos de voz ou por acionadores. Pessoas com baixa visão ampliam a tela e dependem de bom contraste. Pessoas surdas precisam de legendas e, muitas vezes, de conteúdo em Libras.</p>
+        <p>Em todos esses casos, o site só funciona se for construído de forma que essas tecnologias consigam entendê-lo.</p>
+      </section>
+      <section aria-labelledby="wcag">
+        <h2 id="wcag">As diretrizes WCAG e o eMAG</h2>
+        <p>As <abbr title="Web Content Accessibility Guidelines">WCAG</abbr>, Diretrizes de Acessibilidade para Conteúdo Web, são publicadas pelo W3C, o consórcio que define os padrões da web. A versão 2.2 foi publicada em 2023. Elas se organizam em quatro princípios:</p>
+        <dl>
+          <dt><strong>Perceptível</strong></dt>
+          <dd>A informação precisa chegar por pelo menos um sentido que a pessoa use: imagens têm texto alternativo, vídeos têm legenda.</dd>
+          <dt><strong>Operável</strong></dt>
+          <dd>Tudo pode ser feito pelo teclado, sem limite de tempo apertado e sem conteúdo que pisque de forma perigosa.</dd>
+          <dt><strong>Compreensível</strong></dt>
+          <dd>Textos claros, navegação previsível e formulários que explicam os erros.</dd>
+          <dt><strong>Robusto</strong></dt>
+          <dd>O código segue os padrões, para funcionar em diferentes navegadores e tecnologias assistivas.</dd>
+        </dl>
+        <p>No Brasil, o governo federal publica o <abbr title="Modelo de Acessibilidade em Governo Eletrônico">eMAG</abbr>, que adapta essas recomendações aos sites públicos. É dele que vem, por exemplo, o padrão de atalhos de teclado numerados que você encontra no topo deste site.</p>
+      </section>
+      <section aria-labelledby="erros-comuns">
+        <h2 id="erros-comuns">Erros mais comuns e como evitar</h2>
+        <div class="tabela-rolagem">
+          <table>
+            <caption>Problemas frequentes em sites e a solução correspondente</caption>
+            <thead>
+              <tr><th scope="col">Problema</th><th scope="col">Quem é afetado</th><th scope="col">Como resolver</th></tr>
+            </thead>
+            <tbody>
+              <tr><th scope="row">Texto com pouco contraste</th><td>Baixa visão, daltonismo, quem usa celular no sol</td><td>Contraste mínimo de 4,5:1 para texto comum</td></tr>
+              <tr><th scope="row">Imagem sem texto alternativo</th><td>Pessoas cegas</td><td>Atributo <code>alt</code> descrevendo a função da imagem</td></tr>
+              <tr><th scope="row">Campo de formulário sem rótulo</th><td>Usuários de leitor de tela</td><td>Elemento <code>label</code> ligado ao campo</td></tr>
+              <tr><th scope="row">Link escrito só “clique aqui”</th><td>Quem navega pela lista de links</td><td>Texto que diga para onde o link leva</td></tr>
+              <tr><th scope="row">Foco de teclado invisível</th><td>Quem não usa mouse</td><td>Manter ou criar um contorno de foco bem visível</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+      <section aria-labelledby="teste-voce">
+        <h2 id="teste-voce">Teste você mesmo</h2>
+        <p>Uma forma simples de sentir a experiência é tentar usar um site apenas com o teclado. Use <kbd>Tab</kbd> para avançar, <kbd>Shift</kbd> + <kbd>Tab</kbd> para voltar e <kbd>Enter</kbd> para ativar links e botões. Se você se perder, não souber onde está o foco ou não conseguir chegar a algum botão, o site tem um problema de acessibilidade.</p>
+        <details>
+          <summary>Experimente também o leitor de tela do seu computador</summary>
+          <p>No Windows, o Narrador é ativado com <kbd>Ctrl</kbd> + <kbd>Windows</kbd> + <kbd>Enter</kbd>. No macOS, o VoiceOver é ativado com <kbd>Command</kbd> + <kbd>F5</kbd>. O NVDA é um leitor de tela gratuito para Windows, muito usado no Brasil.</p>
+        </details>
+      </section>
+          <nav class="paginacao" aria-label="Navegação entre artigos">
+            <a href="mobilidade.html" rel="prev">Anterior: Mobilidade</a>
+            <a href="comunicacao.html" rel="next">Próximo: Comunicação</a>
+          </nav>
+        </article>
+      </div>
+    </div>
+  </main>
+
+  <footer class="rodape" id="rodape" tabindex="-1">
+    <div class="conteiner">
+      <div>
+        <h2>Acessível no Dia a Dia</h2>
+        <p>Site produzido como Trabalho Discente Efetivo da disciplina de Programação Web, Engenharia de Software, PUCPR. Conteúdo informativo; não substitui orientação jurídica ou de saúde.</p>
+        <p>&copy; <span id="ano">2026</span> Bruno Ianzen de Oliveira.</p>
+      </div>
+      <nav aria-label="Mapa do site">
+        <h2>Mapa do site</h2>
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="mobilidade.html">Mobilidade</a></li>
+          <li><a href="digital.html">Acessibilidade digital</a></li>
+          <li><a href="comunicacao.html">Comunicação</a></li>
+          <li><a href="trabalho.html">Educação e trabalho</a></li>
+          <li><a href="direitos.html">Direitos e leis</a></li>
+          <li><a href="sobre.html">Sobre e contato</a></li>
+        </ul>
+      </nav>
+      <div>
+        <h2>Acessibilidade</h2>
+        <ul>
+          <li><a href="sobre.html#declaracao">Declaração de acessibilidade</a></li>
+          <li><a href="sobre.html#atalhos-teclado">Atalhos de teclado</a></li>
+          <li><a href="sobre.html#contato">Relatar um problema</a></li>
+        </ul>
+        <a class="voltar-topo" href="#conteudo">Voltar ao início do conteúdo</a>
+      </div>
+    </div>
+  </footer>
+
+  <div id="aviso-status" class="visualmente-oculto" role="status" aria-live="polite"></div>
+
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper><div class="vw-plugin-top-wrapper"></div></div>
+  </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js" defer></script>
+  <script src="js/acessibilidade.js" defer></script>
+  <script>
+    window.addEventListener("load", function () {
+      if (window.VLibras) new window.VLibras.Widget("https://vlibras.gov.br/app");
+    });
+  </script>
+</body>
+</html>

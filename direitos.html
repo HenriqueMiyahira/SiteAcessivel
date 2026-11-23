@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Direitos e leis | Acessível no Dia a Dia</title>
+  <meta name="description" content="Resumo da Lei Brasileira de Inclusão e das principais normas de acessibilidade no Brasil.">
+  <link rel="icon" href="img/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+  <nav class="atalhos" aria-label="Atalhos de teclado">
+    <ul>
+      <li><a href="#conteudo" accesskey="1">Ir para o conteúdo [1]</a></li>
+      <li><a href="#menu-principal" accesskey="2">Ir para o menu [2]</a></li>
+      <li><a href="#barra-acessibilidade" accesskey="3">Ir para os recursos de acessibilidade [3]</a></li>
+      <li><a href="#rodape" accesskey="4">Ir para o rodapé [4]</a></li>
+    </ul>
+  </nav>
+
+  <section class="barra-acess" id="barra-acessibilidade" aria-labelledby="titulo-barra" tabindex="-1">
+    <div class="conteiner">
+      <h2 id="titulo-barra">Recursos de acessibilidade</h2>
+      <button type="button" data-fonte="mais">A+<span class="visualmente-oculto"> aumentar o texto</span></button>
+      <button type="button" data-fonte="menos">A−<span class="visualmente-oculto"> diminuir o texto</span></button>
+      <button type="button" data-alternar="alto-contraste" aria-pressed="false">Alto contraste</button>
+      <button type="button" data-alternar="espacamento" aria-pressed="false">Espaçamento</button>
+      <button type="button" data-alternar="destacar-links" aria-pressed="false">Destacar links</button>
+      <button type="button" id="restaurar">Restaurar padrão</button>
+    </div>
+  </section>
+
+  <header class="cabecalho">
+    <div class="conteiner">
+      <a class="marca" href="index.html">
+        <img src="img/logo.svg" alt="" width="48" height="48">
+        <span>Acessível no Dia a Dia<small>Artigos sobre inclusão na vida cotidiana</small></span>
+      </a>
+      <button type="button" class="botao-menu" id="botao-menu" aria-controls="menu-principal" aria-expanded="true">Menu</button>
+      <nav class="menu" id="menu-principal" aria-label="Menu principal" tabindex="-1" data-aberto="true">
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="mobilidade.html">Mobilidade</a></li>
+          <li><a href="digital.html">Acessibilidade digital</a></li>
+          <li><a href="comunicacao.html">Comunicação</a></li>
+          <li><a href="trabalho.html">Educação e trabalho</a></li>
+          <li><a href="direitos.html" aria-current="page">Direitos e leis</a></li>
+          <li><a href="sobre.html">Sobre e contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <div class="piso-alerta" aria-hidden="true"></div>
+
+  <main id="conteudo" tabindex="-1">
+    <div class="conteiner">
+      <nav class="trilha" aria-label="Você está aqui">
+        <ol>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="direitos.html" aria-current="page">Direitos e leis: o que a legislação brasileira garante</a></li>
+        </ol>
+      </nav>
+      <div class="artigo-layout">
+        <nav class="sumario" aria-labelledby="titulo-sumario">
+          <h2 id="titulo-sumario">Nesta página</h2>
+          <ol>
+          <li><a href="#lbi">Lei Brasileira de Inclusão</a></li>
+          <li><a href="#principais-leis">Principais normas</a></li>
+          <li><a href="#internet">Acessibilidade na internet é obrigação legal</a></li>
+          <li><a href="#duvidas">Perguntas frequentes</a></li>
+          </ol>
+        </nav>
+        <article class="artigo" data-leitura>
+          <h1>Direitos e leis: o que a legislação brasileira garante</h1>
+          <p class="linha-fina">Um resumo das principais normas sobre acessibilidade e inclusão no Brasil, em linguagem direta.</p>
+          <div class="ler-voz">
+            <button type="button" class="botao botao--secundario" id="ouvir" aria-pressed="false">Ouvir este artigo</button>
+            <button type="button" class="botao botao--secundario" id="parar-leitura">Parar leitura</button>
+          </div>
+          
+      <section aria-labelledby="lbi">
+        <h2 id="lbi">Lei Brasileira de Inclusão</h2>
+        <p>A Lei 13.146, de 2015, também chamada de Estatuto da Pessoa com Deficiência, entrou em vigor em janeiro de 2016. Ela se baseia na Convenção da ONU sobre os Direitos das Pessoas com Deficiência, que o Brasil incorporou à Constituição com status de emenda constitucional.</p>
+        <p>A lei adota um modelo social de deficiência: a deficiência não está apenas no corpo da pessoa, mas na interação entre ela e as barreiras do ambiente. Se a barreira é removida, a participação se torna possível. A LBI também define como crime discriminar uma pessoa em razão de sua deficiência.</p>
+      </section>
+      <section aria-labelledby="principais-leis">
+        <h2 id="principais-leis">Principais normas</h2>
+        <div class="tabela-rolagem">
+          <table>
+            <caption>Leis e normas brasileiras sobre acessibilidade</caption>
+            <thead>
+              <tr><th scope="col">Norma</th><th scope="col">Ano</th><th scope="col">O que estabelece</th></tr>
+            </thead>
+            <tbody>
+              <tr><th scope="row">Lei 8.213 (art. 93)</th><td>1991</td><td>Cotas para pessoas com deficiência em empresas com 100 ou mais empregados</td></tr>
+              <tr><th scope="row">Lei 10.098</th><td>2000</td><td>Critérios gerais de acessibilidade em espaços, transportes e comunicação</td></tr>
+              <tr><th scope="row">Lei 10.436</th><td>2002</td><td>Reconhece a Libras como meio legal de comunicação</td></tr>
+              <tr><th scope="row">Decreto 5.296</th><td>2004</td><td>Regulamenta prazos e regras de acessibilidade, incluindo sites públicos</td></tr>
+              <tr><th scope="row">Lei 12.764</th><td>2012</td><td>Reconhece a pessoa com transtorno do espectro autista como pessoa com deficiência para todos os efeitos legais</td></tr>
+              <tr><th scope="row">Lei 13.146 (LBI)</th><td>2015</td><td>Estatuto da Pessoa com Deficiência: direitos à acessibilidade, educação, trabalho, saúde e outros</td></tr>
+              <tr><th scope="row">ABNT NBR 9050</th><td>atualizada periodicamente</td><td>Norma técnica de acessibilidade em edificações, mobiliário e espaços urbanos</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+      <section aria-labelledby="internet">
+        <h2 id="internet">Acessibilidade na internet é obrigação legal</h2>
+        <p>O artigo 63 da LBI torna obrigatória a acessibilidade nos sites mantidos por empresas com sede ou representação comercial no país e por órgãos de governo. Esses sites devem seguir as melhores práticas e diretrizes internacionais de acessibilidade, como as WCAG, e exibir um símbolo de acessibilidade em destaque.</p>
+      </section>
+      <section aria-labelledby="duvidas">
+        <h2 id="duvidas">Perguntas frequentes</h2>
+        <details>
+          <summary>Quem é considerado pessoa com deficiência?</summary>
+          <p>Pela LBI, é quem tem impedimento de longo prazo de natureza física, mental, intelectual ou sensorial que, em interação com uma ou mais barreiras, pode obstruir sua participação plena na sociedade em igualdade de condições com as demais pessoas.</p>
+        </details>
+        <details>
+          <summary>Onde denunciar uma situação de discriminação ou falta de acessibilidade?</summary>
+          <p>É possível procurar o Disque Direitos Humanos, pelo número 100, o Ministério Público, a Defensoria Pública ou os conselhos municipais e estaduais dos direitos da pessoa com deficiência.</p>
+        </details>
+        <details>
+          <summary>Um estabelecimento pode cobrar mais por uma adaptação?</summary>
+          <p>Não. A LBI proíbe a cobrança de valores adicionais para garantir a acessibilidade, como acontece no caso de escolas particulares e serviços de transporte.</p>
+        </details>
+        <p class="meta">Este conteúdo é informativo e não substitui orientação jurídica. Consulte sempre o texto oficial das leis no portal do Planalto.</p>
+      </section>
+          <nav class="paginacao" aria-label="Navegação entre artigos">
+            <a href="trabalho.html" rel="prev">Anterior: Educação e trabalho</a>
+            <a href="sobre.html" rel="next">Próximo: Sobre e contato</a>
+          </nav>
+        </article>
+      </div>
+    </div>
+  </main>
+
+  <footer class="rodape" id="rodape" tabindex="-1">
+    <div class="conteiner">
+      <div>
+        <h2>Acessível no Dia a Dia</h2>
+        <p>Site produzido como Trabalho Discente Efetivo da disciplina de Programação Web, Engenharia de Software, PUCPR. Conteúdo informativo; não substitui orientação jurídica ou de saúde.</p>
+        <p>&copy; <span id="ano">2026</span> Bruno Ianzen de Oliveira.</p>
+      </div>
+      <nav aria-label="Mapa do site">
+        <h2>Mapa do site</h2>
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="mobilidade.html">Mobilidade</a></li>
+          <li><a href="digital.html">Acessibilidade digital</a></li>
+          <li><a href="comunicacao.html">Comunicação</a></li>
+          <li><a href="trabalho.html">Educação e trabalho</a></li>
+          <li><a href="direitos.html">Direitos e leis</a></li>
+          <li><a href="sobre.html">Sobre e contato</a></li>
+        </ul>
+      </nav>
+      <div>
+        <h2>Acessibilidade</h2>
+        <ul>
+          <li><a href="sobre.html#declaracao">Declaração de acessibilidade</a></li>
+          <li><a href="sobre.html#atalhos-teclado">Atalhos de teclado</a></li>
+          <li><a href="sobre.html#contato">Relatar um problema</a></li>
+        </ul>
+        <a class="voltar-topo" href="#conteudo">Voltar ao início do conteúdo</a>
+      </div>
+    </div>
+  </footer>
+
+  <div id="aviso-status" class="visualmente-oculto" role="status" aria-live="polite"></div>
+
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper><div class="vw-plugin-top-wrapper"></div></div>
+  </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js" defer></script>
+  <script src="js/acessibilidade.js" defer></script>
+  <script>
+    window.addEventListener("load", function () {
+      if (window.VLibras) new window.VLibras.Widget("https://vlibras.gov.br/app");
+    });
+  </script>
+</body>
+</html>

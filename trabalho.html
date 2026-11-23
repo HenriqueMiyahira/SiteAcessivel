@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Educação e trabalho | Acessível no Dia a Dia</title>
+  <meta name="description" content="Escola inclusiva, Lei de Cotas e adaptações razoáveis no trabalho.">
+  <link rel="icon" href="img/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+  <nav class="atalhos" aria-label="Atalhos de teclado">
+    <ul>
+      <li><a href="#conteudo" accesskey="1">Ir para o conteúdo [1]</a></li>
+      <li><a href="#menu-principal" accesskey="2">Ir para o menu [2]</a></li>
+      <li><a href="#barra-acessibilidade" accesskey="3">Ir para os recursos de acessibilidade [3]</a></li>
+      <li><a href="#rodape" accesskey="4">Ir para o rodapé [4]</a></li>
+    </ul>
+  </nav>
+
+  <section class="barra-acess" id="barra-acessibilidade" aria-labelledby="titulo-barra" tabindex="-1">
+    <div class="conteiner">
+      <h2 id="titulo-barra">Recursos de acessibilidade</h2>
+      <button type="button" data-fonte="mais">A+<span class="visualmente-oculto"> aumentar o texto</span></button>
+      <button type="button" data-fonte="menos">A−<span class="visualmente-oculto"> diminuir o texto</span></button>
+      <button type="button" data-alternar="alto-contraste" aria-pressed="false">Alto contraste</button>
+      <button type="button" data-alternar="espacamento" aria-pressed="false">Espaçamento</button>
+      <button type="button" data-alternar="destacar-links" aria-pressed="false">Destacar links</button>
+      <button type="button" id="restaurar">Restaurar padrão</button>
+    </div>
+  </section>
+
+  <header class="cabecalho">
+    <div class="conteiner">
+      <a class="marca" href="index.html">
+        <img src="img/logo.svg" alt="" width="48" height="48">
+        <span>Acessível no Dia a Dia<small>Artigos sobre inclusão na vida cotidiana</small></span>
+      </a>
+      <button type="button" class="botao-menu" id="botao-menu" aria-controls="menu-principal" aria-expanded="true">Menu</button>
+      <nav class="menu" id="menu-principal" aria-label="Menu principal" tabindex="-1" data-aberto="true">
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="mobilidade.html">Mobilidade</a></li>
+          <li><a href="digital.html">Acessibilidade digital</a></li>
+          <li><a href="comunicacao.html">Comunicação</a></li>
+          <li><a href="trabalho.html" aria-current="page">Educação e trabalho</a></li>
+          <li><a href="direitos.html">Direitos e leis</a></li>
+          <li><a href="sobre.html">Sobre e contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <div class="piso-alerta" aria-hidden="true"></div>
+
+  <main id="conteudo" tabindex="-1">
+    <div class="conteiner">
+      <nav class="trilha" aria-label="Você está aqui">
+        <ol>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="trabalho.html" aria-current="page">Educação e trabalho: inclusão que começa na escola</a></li>
+        </ol>
+      </nav>
+      <div class="artigo-layout">
+        <nav class="sumario" aria-labelledby="titulo-sumario">
+          <h2 id="titulo-sumario">Nesta página</h2>
+          <ol>
+          <li><a href="#cenario">O cenário em números</a></li>
+          <li><a href="#escola">A escola inclusiva</a></li>
+          <li><a href="#cotas">A Lei de Cotas nas empresas</a></li>
+          <li><a href="#adaptacoes">Adaptações razoáveis</a></li>
+          </ol>
+        </nav>
+        <article class="artigo" data-leitura>
+          <h1>Educação e trabalho: inclusão que começa na escola</h1>
+          <p class="linha-fina">Estudar e trabalhar são caminhos para a autonomia. Para muitas pessoas com deficiência, esses caminhos ainda têm obstáculos que podem ser removidos.</p>
+          <div class="ler-voz">
+            <button type="button" class="botao botao--secundario" id="ouvir" aria-pressed="false">Ouvir este artigo</button>
+            <button type="button" class="botao botao--secundario" id="parar-leitura">Parar leitura</button>
+          </div>
+          <figure>
+            <img src="img/figura-trabalho.svg" alt="Estação de trabalho adaptada: mesa com altura livre para cadeira de rodas, monitor e linha braille ao lado do teclado, com uma pessoa em cadeira de rodas posicionada à mesa" width="800" height="360">
+            <figcaption>Adaptações razoáveis, como mesa com altura adequada e linha braille, costumam ser simples e baratas.</figcaption>
+          </figure>
+      <section aria-labelledby="cenario">
+        <h2 id="cenario">O cenário em números</h2>
+        <p>Os dados do Censo 2022, divulgados pelo IBGE em 2025, mostram que as pessoas com deficiência têm menos acesso à escola e ao mercado de trabalho. A taxa de analfabetismo nesse grupo é cerca de quatro vezes maior do que entre as pessoas sem deficiência, e apenas uma parcela pequena, perto de três em cada dez pessoas com deficiência em idade de trabalhar, estava ocupada.</p>
+        <p>Esses números não falam de incapacidade, e sim de barreiras: escolas sem estrutura, transporte inacessível, preconceito na contratação e falta de adaptações no posto de trabalho.</p>
+      </section>
+      <section aria-labelledby="escola">
+        <h2 id="escola">A escola inclusiva</h2>
+        <p>A Lei Brasileira de Inclusão garante o direito à educação em todos os níveis, em escolas regulares, e proíbe que escolas particulares cobrem valores adicionais pelas adaptações necessárias. Na prática, isso inclui recursos como:</p>
+        <ul>
+          <li>atendimento educacional especializado, em geral nas salas de recursos multifuncionais;</li>
+          <li>profissional de apoio escolar, quando necessário;</li>
+          <li>material em braille, fonte ampliada ou formato digital acessível;</li>
+          <li>intérprete de Libras e ensino bilíngue para estudantes surdos;</li>
+          <li>tempo adicional em provas e adaptação de atividades.</li>
+        </ul>
+        <p>A inclusão beneficia toda a turma: colegas aprendem a conviver com a diferença, e professores desenvolvem estratégias que ajudam outros alunos com dificuldades.</p>
+      </section>
+      <section aria-labelledby="cotas">
+        <h2 id="cotas">A Lei de Cotas nas empresas</h2>
+        <p>O artigo 93 da Lei 8.213, de 1991, determina que empresas com 100 ou mais empregados reservem de 2% a 5% das vagas para pessoas com deficiência ou reabilitadas pelo INSS. A porcentagem cresce conforme o tamanho da empresa.</p>
+        <div class="tabela-rolagem">
+          <table>
+            <caption>Percentual mínimo de vagas reservadas, conforme o número de empregados</caption>
+            <thead><tr><th scope="col">Número de empregados</th><th scope="col">Percentual mínimo</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">De 100 a 200</th><td>2%</td></tr>
+              <tr><th scope="row">De 201 a 500</th><td>3%</td></tr>
+              <tr><th scope="row">De 501 a 1.000</th><td>4%</td></tr>
+              <tr><th scope="row">Mais de 1.000</th><td>5%</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Cumprir a cota é o mínimo. Inclusão de verdade significa oferecer plano de carreira, ambiente acessível e respeito, e não apenas preencher uma planilha.</p>
+      </section>
+      <section aria-labelledby="adaptacoes">
+        <h2 id="adaptacoes">Adaptações razoáveis</h2>
+        <p>A lei chama de adaptação razoável qualquer ajuste necessário para que a pessoa com deficiência exerça seus direitos em igualdade com as demais, sem impor um ônus desproporcional. No trabalho, isso pode ser um software leitor de tela, uma mesa regulável, horários flexíveis para terapias, comunicação por escrito em reuniões ou um intérprete de Libras em treinamentos.</p>
+        <p>Negar uma adaptação razoável é considerado discriminação pela Lei Brasileira de Inclusão.</p>
+      </section>
+          <nav class="paginacao" aria-label="Navegação entre artigos">
+            <a href="comunicacao.html" rel="prev">Anterior: Comunicação</a>
+            <a href="direitos.html" rel="next">Próximo: Direitos e leis</a>
+          </nav>
+        </article>
+      </div>
+    </div>
+  </main>
+
+  <footer class="rodape" id="rodape" tabindex="-1">
+    <div class="conteiner">
+      <div>
+        <h2>Acessível no Dia a Dia</h2>
+        <p>Site produzido como Trabalho Discente Efetivo da disciplina de Programação Web, Engenharia de Software, PUCPR. Conteúdo informativo; não substitui orientação jurídica ou de saúde.</p>
+        <p>&copy; <span id="ano">2026</span> Bruno Ianzen de Oliveira.</p>
+      </div>
+      <nav aria-label="Mapa do site">
+        <h2>Mapa do site</h2>
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="mobilidade.html">Mobilidade</a></li>
+          <li><a href="digital.html">Acessibilidade digital</a></li>
+          <li><a href="comunicacao.html">Comunicação</a></li>
+          <li><a href="trabalho.html">Educação e trabalho</a></li>
+          <li><a href="direitos.html">Direitos e leis</a></li>
+          <li><a href="sobre.html">Sobre e contato</a></li>
+        </ul>
+      </nav>
+      <div>
+        <h2>Acessibilidade</h2>
+        <ul>
+          <li><a href="sobre.html#declaracao">Declaração de acessibilidade</a></li>
+          <li><a href="sobre.html#atalhos-teclado">Atalhos de teclado</a></li>
+          <li><a href="sobre.html#contato">Relatar um problema</a></li>
+        </ul>
+        <a class="voltar-topo" href="#conteudo">Voltar ao início do conteúdo</a>
+      </div>
+    </div>
+  </footer>
+
+  <div id="aviso-status" class="visualmente-oculto" role="status" aria-live="polite"></div>
+
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper><div class="vw-plugin-top-wrapper"></div></div>
+  </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js" defer></script>
+  <script src="js/acessibilidade.js" defer></script>
+  <script>
+    window.addEventListener("load", function () {
+      if (window.VLibras) new window.VLibras.Widget("https://vlibras.gov.br/app");
+    });
+  </script>
+</body>
+</html>

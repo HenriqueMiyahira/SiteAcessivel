@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Comunicação | Acessível no Dia a Dia</title>
+  <meta name="description" content="Libras, legendas, audiodescrição, braille e linguagem simples.">
+  <link rel="icon" href="img/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+  <nav class="atalhos" aria-label="Atalhos de teclado">
+    <ul>
+      <li><a href="#conteudo" accesskey="1">Ir para o conteúdo [1]</a></li>
+      <li><a href="#menu-principal" accesskey="2">Ir para o menu [2]</a></li>
+      <li><a href="#barra-acessibilidade" accesskey="3">Ir para os recursos de acessibilidade [3]</a></li>
+      <li><a href="#rodape" accesskey="4">Ir para o rodapé [4]</a></li>
+    </ul>
+  </nav>
+
+  <section class="barra-acess" id="barra-acessibilidade" aria-labelledby="titulo-barra" tabindex="-1">
+    <div class="conteiner">
+      <h2 id="titulo-barra">Recursos de acessibilidade</h2>
+      <button type="button" data-fonte="mais">A+<span class="visualmente-oculto"> aumentar o texto</span></button>
+      <button type="button" data-fonte="menos">A−<span class="visualmente-oculto"> diminuir o texto</span></button>
+      <button type="button" data-alternar="alto-contraste" aria-pressed="false">Alto contraste</button>
+      <button type="button" data-alternar="espacamento" aria-pressed="false">Espaçamento</button>
+      <button type="button" data-alternar="destacar-links" aria-pressed="false">Destacar links</button>
+      <button type="button" id="restaurar">Restaurar padrão</button>
+    </div>
+  </section>
+
+  <header class="cabecalho">
+    <div class="conteiner">
+      <a class="marca" href="index.html">
+        <img src="img/logo.svg" alt="" width="48" height="48">
+        <span>Acessível no Dia a Dia<small>Artigos sobre inclusão na vida cotidiana</small></span>
+      </a>
+      <button type="button" class="botao-menu" id="botao-menu" aria-controls="menu-principal" aria-expanded="true">Menu</button>
+      <nav class="menu" id="menu-principal" aria-label="Menu principal" tabindex="-1" data-aberto="true">
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="mobilidade.html">Mobilidade</a></li>
+          <li><a href="digital.html">Acessibilidade digital</a></li>
+          <li><a href="comunicacao.html" aria-current="page">Comunicação</a></li>
+          <li><a href="trabalho.html">Educação e trabalho</a></li>
+          <li><a href="direitos.html">Direitos e leis</a></li>
+          <li><a href="sobre.html">Sobre e contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <div class="piso-alerta" aria-hidden="true"></div>
+
+  <main id="conteudo" tabindex="-1">
+    <div class="conteiner">
+      <nav class="trilha" aria-label="Você está aqui">
+        <ol>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="comunicacao.html" aria-current="page">Comunicação acessível: muitas formas de dizer a mesma coisa</a></li>
+        </ol>
+      </nav>
+      <div class="artigo-layout">
+        <nav class="sumario" aria-labelledby="titulo-sumario">
+          <h2 id="titulo-sumario">Nesta página</h2>
+          <ol>
+          <li><a href="#libras">Libras é uma língua, não mímica</a></li>
+          <li><a href="#legendas">Legendas e transcrições</a></li>
+          <li><a href="#audiodescricao">Audiodescrição</a></li>
+          <li><a href="#braille">Braille e informação tátil</a></li>
+          <li><a href="#linguagem-simples">Linguagem simples</a></li>
+          </ol>
+        </nav>
+        <article class="artigo" data-leitura>
+          <h1>Comunicação acessível: muitas formas de dizer a mesma coisa</h1>
+          <p class="linha-fina">Libras, legendas, braille, audiodescrição e linguagem simples garantem que a informação chegue a quem precisa dela.</p>
+          <div class="ler-voz">
+            <button type="button" class="botao botao--secundario" id="ouvir" aria-pressed="false">Ouvir este artigo</button>
+            <button type="button" class="botao botao--secundario" id="parar-leitura">Parar leitura</button>
+          </div>
+          <figure>
+            <img src="img/figura-comunicacao.svg" alt="Tela de vídeo com legenda na parte inferior e, ao lado, uma janela com intérprete de Libras" width="800" height="360">
+            <figcaption>Legenda e janela de Libras atendem públicos diferentes: nem toda pessoa surda é fluente em português escrito.</figcaption>
+          </figure>
+      <section aria-labelledby="libras">
+        <h2 id="libras">Libras é uma língua, não mímica</h2>
+        <p>A Língua Brasileira de Sinais foi reconhecida como meio legal de comunicação pela Lei 10.436, de 2002, e regulamentada pelo Decreto 5.626, de 2005. Ela tem gramática própria, com estrutura diferente da do português, e variações regionais, como qualquer língua.</p>
+        <p>Para muitas pessoas surdas, a Libras é a primeira língua e o português é a segunda. Por isso, apenas legendar um vídeo nem sempre é suficiente: a janela com intérprete garante o acesso a quem se comunica principalmente em sinais. Este site, por exemplo, oferece o tradutor <strong>VLibras</strong>, ferramenta gratuita do Governo Federal, no botão azul no canto da tela.</p>
+      </section>
+      <section aria-labelledby="legendas">
+        <h2 id="legendas">Legendas e transcrições</h2>
+        <p>Há diferença entre a legenda comum, que traduz apenas as falas, e a legenda para surdos e ensurdecidos, que também indica sons importantes, como “[telefone tocando]” ou “[música tensa]”. Para áudios e podcasts, uma transcrição em texto cumpre o mesmo papel e ainda ajuda quem prefere ler, quem está em um lugar barulhento e os mecanismos de busca.</p>
+      </section>
+      <section aria-labelledby="audiodescricao">
+        <h2 id="audiodescricao">Audiodescrição</h2>
+        <p>A audiodescrição narra, nos intervalos entre as falas, o que está acontecendo na imagem: cenário, expressões, ações e textos que aparecem na tela. Ela é essencial para pessoas cegas ou com baixa visão em filmes, peças de teatro, eventos e até em fotos publicadas nas redes sociais.</p>
+        <div class="destaque" role="note">
+          <h3>Nas redes sociais</h3>
+          <p>Ao publicar uma imagem, use o campo de texto alternativo da plataforma ou escreva uma breve descrição na legenda. Muita gente adota a hashtag #PraCegoVer para sinalizar que a imagem foi descrita.</p>
+        </div>
+      </section>
+      <section aria-labelledby="braille">
+        <h2 id="braille">Braille e informação tátil</h2>
+        <p>O sistema braille representa letras, números e sinais por combinações de até seis pontos em relevo. Ele aparece em botões de elevador, embalagens de remédios, cardápios e placas. Para quem lê braille, essa informação dá autonomia para tarefas simples, como saber em qual andar está ou qual é a dose de um medicamento.</p>
+      </section>
+      <section aria-labelledby="linguagem-simples">
+        <h2 id="linguagem-simples">Linguagem simples</h2>
+        <p>Escrever de forma clara também é acessibilidade. Frases curtas, palavras do dia a dia, a informação principal logo no começo e explicação para termos técnicos ajudam pessoas com deficiência intelectual, idosos, pessoas com pouca escolaridade e qualquer leitor com pressa. Vários órgãos públicos brasileiros já adotam programas de linguagem simples em documentos e serviços.</p>
+      </section>
+          <nav class="paginacao" aria-label="Navegação entre artigos">
+            <a href="digital.html" rel="prev">Anterior: Acessibilidade digital</a>
+            <a href="trabalho.html" rel="next">Próximo: Educação e trabalho</a>
+          </nav>
+        </article>
+      </div>
+    </div>
+  </main>
+
+  <footer class="rodape" id="rodape" tabindex="-1">
+    <div class="conteiner">
+      <div>
+        <h2>Acessível no Dia a Dia</h2>
+        <p>Site produzido como Trabalho Discente Efetivo da disciplina de Programação Web, Engenharia de Software, PUCPR. Conteúdo informativo; não substitui orientação jurídica ou de saúde.</p>
+        <p>&copy; <span id="ano">2026</span> Bruno Ianzen de Oliveira.</p>
+      </div>
+      <nav aria-label="Mapa do site">
+        <h2>Mapa do site</h2>
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="mobilidade.html">Mobilidade</a></li>
+          <li><a href="digital.html">Acessibilidade digital</a></li>
+          <li><a href="comunicacao.html">Comunicação</a></li>
+          <li><a href="trabalho.html">Educação e trabalho</a></li>
+          <li><a href="direitos.html">Direitos e leis</a></li>
+          <li><a href="sobre.html">Sobre e contato</a></li>
+        </ul>
+      </nav>
+      <div>
+        <h2>Acessibilidade</h2>
+        <ul>
+          <li><a href="sobre.html#declaracao">Declaração de acessibilidade</a></li>
+          <li><a href="sobre.html#atalhos-teclado">Atalhos de teclado</a></li>
+          <li><a href="sobre.html#contato">Relatar um problema</a></li>
+        </ul>
+        <a class="voltar-topo" href="#conteudo">Voltar ao início do conteúdo</a>
+      </div>
+    </div>
+  </footer>
+
+  <div id="aviso-status" class="visualmente-oculto" role="status" aria-live="polite"></div>
+
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper><div class="vw-plugin-top-wrapper"></div></div>
+  </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js" defer></script>
+  <script src="js/acessibilidade.js" defer></script>
+  <script>
+    window.addEventListener("load", function () {
+      if (window.VLibras) new window.VLibras.Widget("https://vlibras.gov.br/app");
+    });
+  </script>
+</body>
+</html>
